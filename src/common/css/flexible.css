@@ -5,6 +5,7 @@ html,body{
   user-select: none;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
+  background-color: #ECF0F1;
 }
 html * {
   outline: none;
@@ -132,9 +133,50 @@ sub {
 a:hover {
   text-decoration: underline;
 }
+a:active{
+  text-decoration: none;
+}
 /* 默认不显示下划线，保持页面简洁 */
 ins,
 a {
   text-decoration: none;
   -webkit-backface-visibility: hidden;
 }
+
+/*文字颜色*/
+/*.btnColor0{color: #ffffff !important}
+.btnColor1{color: #eb4f38 !important}
+.btnColor2{color: #2ecc71 !important}
+.btnColor3{color: #1abc9c !important}
+.btnColor4{color: #5dade2 !important}
+.btnColor5{color: #e74c3c !important}
+.btnColor6{color: #f1c40f !important}
+.btnColor7{color: #4e6d8d !important}
+.btnColor8{color: #95a5a6 !important}
+.btnColor9{color: #e96e4f !important}
+.btnColor10{color: #F27474 !important}
+.btnColor11{color: #ECF0F1 !important}
+.btnColor12{color: #BDC3C7 !important}
+.btnColor13{color: #6f5499 !important}
+.btnColor14{color: #03a9f4 !important}
+.btnColor15{color: #1EC38B !important}
+.btnColor16{color: #ff5c03 !important}*/
+/*背景颜色*/
+
+/*.bgColor0{background-color: #ffffff !important}
+.bgColor1{background-color: #eb4f38 !important}
+.bgColor2{background-color: #2ecc71 !important}
+.bgColor3{background-color: #1abc9c !important}
+.bgColor4{background-color: #5dade2 !important}
+.bgColor5{background-color: #e74c3c !important}
+.bgColor6{background-color: #f1c40f !important}
+.bgColor7{background-color: #4e6d8d !important}
+.bgColor8{background-color: #95a5a6 !important}
+.bgColor9{background-color: #e96e4f !important}
+.bgColor10{background-color: #F27474 !important}
+.bgColor11{background-color: #ECF0F1 !important}
+.bgColor12{background-color: #BDC3C7 !important}
+.bgColor13{background-color: #6f5499 !important}
+.bgColor14{background-color: #03a9f4 !important}
+.bgColor15{background-color: #1EC38B !important}
+.bgColor16{background-color: #ff5c03 !important}*/

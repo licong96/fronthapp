@@ -1,0 +1,68 @@
+// 1px边框
+@mixin border($type) {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    background: #ddd;
+    transform-origin: 0 0;
+  }
+  @if $type == t {
+    &:after{
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleY(0.5);
+    }
+  } @else if $type == b {
+    &:after{
+      top: auto;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleY(0.5);
+    }
+  } @else if $type == l {
+    &:after{
+      left: 0;
+      width: 1px;
+      height: 100%;
+      transform: scaleX(0.5);
+    }
+  } @else if $type == r {
+    &:after{
+      right: 0;
+      width: 1px;
+      height: 100%;
+      transform: scaleX(0.5);
+    }
+  }
+}
+
+$color: #ffffff;    //白色
+$color1: #ff5c03;   // 红色
+$color2: #1EC38B;   // 绿色
+$color3: #03a9f4;   // 蓝色
+$color4: #6f5499;   // 紫色
+$color5: #BDC3C7;   // 灰色
+$color6: #ECF0F1;   // 灰白色
+
+// 文字颜色
+$textColor1: #333;
+$textColor2: #666;
+$textColor3: #999;
+
+// 按钮颜色
+$btnColor1: #eb4f38;
+$btnColor2: #2ecc71;
+$btnColor3: #1abc9c;
+$btnColor4: #5dade2;
+$btnColor5: #e74c3c;
+$btnColor6: #f1c40f;
+$btnColor7: #4e6d8d;
+$btnColor8: #95a5a6;
+$btnColor9: #e96e4f;
+$btnColor10: #F27474;
