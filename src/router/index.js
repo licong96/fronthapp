@@ -5,6 +5,8 @@ import allshots from 'components/allshots/allshots'
 import myshots from 'components/myshots/myshots'
 import myinvite from 'components/myinvite/myinvite'
 import draw from 'base/draw/draw'       // 开奖
+import allshotsthrow from 'components/allshots/throw/throw'   // 全部去投
+import myshotsthrow from 'components/myshots/throw/throw'   // 我投的去投
 
 Vue.use(Router)
 
@@ -25,6 +27,10 @@ export default new Router({
         {
           path: '/allshots/draw',
           component: draw
+        },
+        {
+          path: '/allshots/throw',
+          component: allshotsthrow
         }
       ]
     },
@@ -39,6 +45,10 @@ export default new Router({
         {
           path: '/myshots/draw',
           component: draw
+        },
+        {
+          path: '/myshots/throw',
+          component: myshotsthrow
         }
       ]
     },

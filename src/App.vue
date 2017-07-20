@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
   @import "common/sass/style.scss";
-
+  
   #app{
     overflow: hidden;
     .header{

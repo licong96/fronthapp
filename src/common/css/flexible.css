@@ -180,3 +180,24 @@ a {
 .bgColor14{background-color: #03a9f4 !important}
 .bgColor15{background-color: #1EC38B !important}
 .bgColor16{background-color: #ff5c03 !important}*/
+
+input{
+  display: inline-block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  font-size: 14px;
+  padding: 6px 0 6px 6px;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: border linear .2s,box-shadow linear .2s;
+  background-color: #fff;
+}
+input:focus{
+  border-color: #1abc9c;
+  box-shadow: none;
+}
+input.error{
+  border-color: #e74c3c;
+  color: #e74c3c;
+  box-shadow: none;
+}
