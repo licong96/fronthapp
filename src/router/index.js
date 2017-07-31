@@ -26,10 +26,12 @@ export default new Router({
       children: [
         {
           path: '/allshots/draw',
+          name: 'AllshotsDraw',
           component: draw
         },
         {
-          path: '/allshots/throw',
+          path: '/allshots/throw/:id',
+          name: 'AllshotsThrow',
           component: allshotsthrow
         }
       ]

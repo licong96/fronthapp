@@ -1,13 +1,15 @@
 <template lang="html">
-  <!-- 我投的 -->
+  <!-- 我的项目 -->
   <section class="myshots">
-    <ul>
-      <li v-for="item in 10">
-        <p class="title">项目名称</p>
-        <router-link to="/myshots/draw" class="waves-effect waves-button draw">开奖</router-link>
-        <router-link to="/myshots/throw" class="waves-effect waves-button throw">去投</router-link>
-      </li>
-    </ul>
+    <router-anime>
+      <ul>
+        <li router-anime v-for="item in myshotsData">
+          <p class="title">{{item.title}}</p>
+          <router-link to="/myshots/draw" class="waves-effect waves-button draw">开奖</router-link>
+          <router-link to="/myshots/throw" class="waves-effect waves-button throw">去投</router-link>
+        </li>
+      </ul>
+    </router-anime>
     <transition name="translate">
       <keep-alive>
         <router-view></router-view>
@@ -17,7 +19,35 @@
 </template>
 
 <script>
+import RouterAnime from 'base/router-anime/router-anime'
+import {mapGetters} from 'vuex'
+
 export default {
+  data () {
+    return {
+      myshotsData: {}
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'myshots'
+    ])
+  },
+  created () {
+    this.myshotsData = this.myshots
+  },
+  watch: {
+    myshots: {
+      handler: function (newVal) {
+        this.myshotsData = newVal
+        console.log(this.myshotsData)
+      },
+      deep: true
+    }
+  },
+  components: {
+    RouterAnime
+  }
 }
 </script>
 

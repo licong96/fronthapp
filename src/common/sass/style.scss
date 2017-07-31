@@ -42,6 +42,13 @@
   }
 }
 
+// 文字超出隐藏
+@mixin nowrap {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
 $color: #ffffff;    //白色
 $color1: #ff5c03;   // 红色
 $color2: #1EC38B;   // 绿色

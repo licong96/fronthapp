@@ -1,23 +1,51 @@
 <template lang="html">
-  <!-- 全部在投 -->
+  <!-- 在投项目 -->
   <section class="allshots">
-    <ul>
-      <li v-for="item in 10">
-        <p class="title">项目名称</p>
-        <router-link to="/allshots/draw" class="waves-effect waves-button draw">开奖</router-link>
-        <router-link to="/allshots/throw" class="waves-effect waves-button throw">去投</router-link>
-      </li>
-    </ul>
+    <router-anime>
+      <ul>
+        <li router-anime v-for="item in allshotsData">
+          <p class="title">{{item.title}}</p>
+          <router-link :to="{ name: 'AllshotsDraw', params: { id: item.id }}" class="waves-effect waves-button draw">开奖</router-link>
+          <router-link :to="{ name: 'AllshotsThrow', params: { id: item.id }}" class="waves-effect waves-button throw">去投</router-link>
+        </li>
+      </ul>
+    </router-anime>
     <transition name="translate">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </transition>
   </section>
 </template>
 
 <script>
+import RouterAnime from 'base/router-anime/router-anime'
+import {mapGetters} from 'vuex'
+
 export default {
+  data () {
+    return {
+      allshotsData: {}
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'allshots'
+    ])
+  },
+  created () {
+    this.allshotsData = this.allshots
+  },
+  watch: {
+    allshots: {
+      handler: function (newVal) {
+        this.allshotsData = newVal
+        console.log(this.allshotsData)
+      },
+      deep: true
+    }
+  },
+  components: {
+    RouterAnime
+  }
 }
 </script>
 

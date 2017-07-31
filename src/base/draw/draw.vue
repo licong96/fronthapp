@@ -39,6 +39,7 @@ export default {
     }
   },
   created () {
+    console.log('id=' + this.$route.params.id)
     this.$nextTick(() => {
       // 根据li的个数计算ul的宽度
       let oUl = this.$refs.uldraw

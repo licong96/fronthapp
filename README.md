@@ -30,7 +30,7 @@ npm test
 npm install --save-dev sass-loader node-sass lib-flexible fastclick node-waves
 
 # node-waves
-波纹点击效果初始化  Waves.init()              
+波纹点击效果初始化  Waves.init()
 需要引入额外的css
 按钮class         waves-effect waves-button
 图标class         waves-effect waves-circle

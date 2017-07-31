@@ -201,3 +201,31 @@ input.error{
   color: #e74c3c;
   box-shadow: none;
 }
+
+/*加载动画*/
+.loadimg[lazy=loaded] {
+ animation: loader 1s both;
+}
+@keyframes loader {
+ from {
+   opacity: 0;
+   filter: blur(5px);
+ }
+ to {
+   opacity: 1;
+   filter: blur(0);
+ }
+}
+
+/*路由动画*/
+[router-anime] {
+  visibility: hidden;
+}
+[router-anime].routerAnimation {
+  animation: routerAnimationShow .3s;
+  visibility: visible;
+}
+@keyframes routerAnimationShow {
+  0%   { opacity: 0; transform: translateY(1rem); }
+  100% { opacity: 1; transform: translateY(0); }
+}
