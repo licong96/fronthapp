@@ -27,7 +27,7 @@ npm run e2e
 npm test
 
 ```
-# 额外安装sass
+# 额外安装
 ```
 npm install --save-dev sass-loader node-sass lib-flexible fastclick node-waves
 ```
@@ -50,7 +50,3 @@ npm install --save-dev sass-loader node-sass lib-flexible fastclick node-waves
 
   图片              <i class="waves-effect"><img class="waves-image" /></i>
 ```
-###看不懂别赖我
-
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
